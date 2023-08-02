@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import './registerForm.css';
 import axios from 'axios';
 
-const BASE_URL = 'http://ecommerce.muersolutions.com/api/v1'
-const SIGN_UP_URL = 'http://ecommerce.muersolutions.com/api/v1/user/signup'
+const BASE_URL = 'http://ecommerce.muersolutions.com/api/v1';
+const SIGN_UP_URL = 'http://ecommerce.muersolutions.com/api/v1/user/signup';
 
 const RegisterForm = () => {
-    const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
   const [email, setEmail] = useState('');
@@ -19,16 +19,16 @@ const RegisterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(SIGN_UP_URL,{
-      first_name,
-      last_name,
-      email,
-      password, 
+      const response = await axios.post(SIGN_UP_URL, {
+        first_name,
+        last_name,
+        email,
+        password,
       });
       console.log('Registration success! Server response:', response.data);
       //
-    } catch (error){
-      console.error('Registration failed! Error:', error)
+    } catch (error) {
+      console.error('Registration failed! Error:', error);
       //
     }
   };

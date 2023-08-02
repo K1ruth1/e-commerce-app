@@ -3,7 +3,7 @@ import './login.css';
 import axios from 'axios';
 
 const BASE_URL = 'http://ecommerce.muersolutions.com/api/v1';
-const SIGN_IN_URL = 'http://ecommerce.muersolutions.com/api/v1/user/login'
+const SIGN_IN_URL = 'http://ecommerce.muersolutions.com/api/v1/user/login';
 
 const AuthForm = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,14 +16,14 @@ const AuthForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try{
-      const response = await axios.post(SIGN_IN_URL,{
+    try {
+      const response = await axios.post(SIGN_IN_URL, {
         email,
         password,
       });
       console.log('Login success! Server response:', response.data);
       //
-    } catch (error){
+    } catch (error) {
       console.error('Login failed! Error:', error);
       //
     }
