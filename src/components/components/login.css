@@ -1,0 +1,29 @@
+.auth-form {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Start the form outside the left boundary */
+    width: 300px;
+    height: 100%;
+    background-color: #f1f1f1;
+    transition: left 0.3s ease; /* CSS transition for smooth sliding effect */
+  }
+  
+  .auth-form.show {
+    left: 0; /* Slide the form into view */
+  }
+  
+  .auth-form.hide {
+    left: -300px; /* Slide the form out of view */
+  }
+  
+  .form-container {
+    padding: 20px;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+  }
+  
+  /* Additional styling for your form, buttons, etc. */
